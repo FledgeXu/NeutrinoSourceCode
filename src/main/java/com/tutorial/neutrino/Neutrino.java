@@ -8,5 +8,6 @@ public class Neutrino {
     public Neutrino() {
         com.tutorial.neutrino.first_item.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.food.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.melee_weapons.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
