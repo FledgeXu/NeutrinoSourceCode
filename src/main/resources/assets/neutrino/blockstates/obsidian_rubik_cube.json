@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "face=0": { "model": "neutrino:block/obsidian_rubik_cube_model_0" },
+    "face=1": { "model": "neutrino:block/obsidian_rubik_cube_model_1" }
+  }
+}
