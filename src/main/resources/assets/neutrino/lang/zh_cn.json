@@ -2,5 +2,6 @@
   "item.neutrino.obsidian_ingot": "黑曜石碇",
   "item.neutrino.obsidian_apple":"黑曜石苹果",
   "item.neutrino.obsidian_sword":"黑曜石剑",
-  "itemGroup.obsidian_group": "黑曜石物品栏"
+  "itemGroup.obsidian_group": "黑曜石物品栏",
+  "message.tour14.counter": "计数: %d"
 }
