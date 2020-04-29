@@ -1,0 +1,5 @@
+{
+  "loader": "forge:obj",
+  "model": "neutrino:models/block/obsidian_obj.obj",
+  "flip-v": true
+}
