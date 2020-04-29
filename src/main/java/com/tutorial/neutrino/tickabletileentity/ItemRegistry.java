@@ -1,4 +1,4 @@
-package com.tutorial.neutrino.first_tileentity;
+package com.tutorial.neutrino.tickabletileentity;
 
 import com.tutorial.neutrino.group.ModGroup;
 import net.minecraft.item.BlockItem;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, "neutrino");
-    public static RegistryObject<Item> obsidianCounterBlock = ITEMS.register("obsidian_counter_block", () -> {
-        return new BlockItem(BlockRegistry.obsidianCounterBlock.get(), new Item.Properties().group(ModGroup.itemGroup));
+    public static RegistryObject<Item> obsidianHelloBlock = ITEMS.register("obsidian_hello_block", () -> {
+        return new BlockItem(BlockRegistry.obsidianHelloBlock.get(), new Item.Properties().group(ModGroup.itemGroup));
     });
 }
