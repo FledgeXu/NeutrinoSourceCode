@@ -36,7 +36,7 @@ public class ObsidianCounter extends Block {
         if (!worldIn.isRemote && handIn == Hand.MAIN_HAND) {
             ObsidianCounterTileEntity obsidianCounterTileEntity = (ObsidianCounterTileEntity) worldIn.getTileEntity(pos);
             int counter = obsidianCounterTileEntity.increase();
-            TranslationTextComponent translationTextComponent = new TranslationTextComponent("message.tour14.counter", counter);
+            TranslationTextComponent translationTextComponent = new TranslationTextComponent("message.neutrino.counter", counter);
             player.sendStatusMessage(translationTextComponent, false);
         }
         return ActionResultType.SUCCESS;
