@@ -23,5 +23,8 @@ public class Neutrino {
         com.tutorial.neutrino.tickabletileentity.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.tickabletileentity.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.tickabletileentity.TileEntityTypeRegistry.TILE_ENTITY_TYPE_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.tileentitydatasync.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.tileentitydatasync.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.tileentitydatasync.TileEntityTypeRegistry.TILE_ENTITY_TYPE_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
