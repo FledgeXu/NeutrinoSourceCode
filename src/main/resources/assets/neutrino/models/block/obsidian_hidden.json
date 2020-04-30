@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "neutrino:block/obsidian_hidden"
+  }
+}
