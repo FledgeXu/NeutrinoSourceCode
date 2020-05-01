@@ -13,13 +13,29 @@ public class Networking {
     }
 
     public static void registerMessage() {
-        INSTANCE = NetworkRegistry.newSimpleChannel(new ResourceLocation("neutrino" + ":first_networking"), () -> "1.0", s -> true, s -> true);
+        INSTANCE = NetworkRegistry.newSimpleChannel(
+                new ResourceLocation("neutrino" + ":first_networking"),
+                () -> {
+                    return "1.0";
+                },
+                (s) -> {
+                    return true;
+                },
+                (s) -> {
+                    return true;
+                });
         INSTANCE.registerMessage(
                 nextID(),
                 SendPack.class,
-                SendPack::toBytes,
-                SendPack::new,
-                SendPack::handler
+                (pack, buffer) -> {
+                    pack.toBytes(buffer);
+                },
+                (buffer) -> {
+                    return new SendPack(buffer);
+                },
+                (pack,ctx) ->{
+                    pack.handler(ctx);
+                }
         );
     }
 }
