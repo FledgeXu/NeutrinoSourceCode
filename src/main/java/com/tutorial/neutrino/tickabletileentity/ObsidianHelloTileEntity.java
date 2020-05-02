@@ -19,7 +19,9 @@ public class ObsidianHelloTileEntity extends TileEntity implements ITickableTile
             if (timer == MAX_TIME) {
                 PlayerEntity player = world.getClosestPlayer(pos.getX(), pos.getY(), pos.getZ(), 10, false);
                 StringTextComponent stringTextComponent = new StringTextComponent("Hello");
-                player.sendMessage(stringTextComponent);
+                if(player!=null){
+                    player.sendMessage(stringTextComponent);
+                }
                 timer = 0;
             }
             timer++;
