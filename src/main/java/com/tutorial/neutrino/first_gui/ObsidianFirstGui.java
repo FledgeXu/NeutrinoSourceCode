@@ -7,7 +7,6 @@ import net.minecraft.client.gui.widget.OptionSlider;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.gui.widget.Widget;
 import net.minecraft.client.gui.widget.button.Button;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.client.settings.SliderPercentageOption;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
@@ -28,7 +27,7 @@ public class ObsidianFirstGui extends Screen {
     @Override
     protected void init() {
         this.minecraft.keyboardListener.enableRepeatEvents(true);
-        this.textFieldWidget = new TextFieldWidget(this.font, this.width / 2 - 100, 66, 200, 20, I18n.format("addServer.enterName"));
+        this.textFieldWidget = new TextFieldWidget(this.font, this.width / 2 - 100, 66, 200, 20, "Context");
         this.children.add(this.textFieldWidget);
 
         this.button = new Button(this.width / 2 - 40, 96, 80, 20, "Save", (button) -> {
