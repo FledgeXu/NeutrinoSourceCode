@@ -2,7 +2,6 @@ package com.tutorial.neutrino.first_entity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.item.BoatEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
 import net.minecraft.network.datasync.DataParameter;
@@ -15,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 public class FlyingSwordEntity extends Entity {
     private Logger logger = LogManager.getLogger();
-    private static final DataParameter<Integer> COUNTER = EntityDataManager.createKey(BoatEntity.class, DataSerializers.VARINT);
+    private static final DataParameter<Integer> COUNTER = EntityDataManager.createKey(FlyingSwordEntity.class, DataSerializers.VARINT);
 
     public FlyingSwordEntity(EntityType<?> entityTypeIn, World worldIn) {
         super(entityTypeIn, worldIn);
