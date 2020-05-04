@@ -1,5 +1,7 @@
 package com.tutorial.neutrino.use_cap;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraftforge.common.capabilities.Capability;
@@ -18,8 +20,15 @@ public class ObsidianTrashTileEntity extends TileEntity {
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
-            return LazyOptional.of(ItemStackHandler::new).cast();
+        if (side == Direction.UP && cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+            return LazyOptional.of(() -> {
+                return new ItemStackHandler() {
+                    @Override
+                    public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
+                        return stack.getItem() == Items.COBBLESTONE;
+                    }
+                };
+            }).cast();
         }
         return super.getCapability(cap, side);
     }
