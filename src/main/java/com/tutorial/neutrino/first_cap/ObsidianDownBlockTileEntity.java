@@ -21,6 +21,6 @@ public class ObsidianDownBlockTileEntity extends TileEntity {
                 return new SimpleCapability("Hello");
             }).cast();
         }
-        return super.getCapability(cap, side);
+        return LazyOptional.empty();
     }
 }
