@@ -1,4 +1,4 @@
-package com.tutorial.neutrino.first_cap;
+package com.tutorial.neutrino.entity_capabilityprovider;
 
 import net.minecraft.nbt.INBT;
 import net.minecraft.util.Direction;
@@ -11,20 +11,20 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class CommonSetUpEventHandler {
+public class CommonSetupEventHandler {
     @SubscribeEvent
-    public static void onSetUpEvent(FMLCommonSetupEvent event) {
+    public static void onSetupEvent(FMLCommonSetupEvent event) {
         CapabilityManager.INSTANCE.register(
-                ISimpleCapability.class,
-                new Capability.IStorage<ISimpleCapability>() {
+                ISpeedUpCapability.class,
+                new Capability.IStorage<ISpeedUpCapability>() {
                     @Nullable
                     @Override
-                    public INBT writeNBT(Capability<ISimpleCapability> capability, ISimpleCapability instance, Direction side) {
+                    public INBT writeNBT(Capability<ISpeedUpCapability> capability, ISpeedUpCapability instance, Direction side) {
                         return null;
                     }
 
                     @Override
-                    public void readNBT(Capability<ISimpleCapability> capability, ISimpleCapability instance, Direction side, INBT nbt) {
+                    public void readNBT(Capability<ISpeedUpCapability> capability, ISpeedUpCapability instance, Direction side, INBT nbt) {
 
                     }
                 },
