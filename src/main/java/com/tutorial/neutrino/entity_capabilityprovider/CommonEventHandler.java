@@ -22,7 +22,6 @@ public class CommonEventHandler {
     @SubscribeEvent
     public static void onPlayerCloned(PlayerEvent.Clone event) {
         if (!event.isWasDeath()) {
-            // We need to copyFrom the capabilities
             LazyOptional<ISpeedUpCapability> oldSpeedCap = event.getOriginal().getCapability(ModCapability.SPEED_UP_CAPABILITY);
             LazyOptional<ISpeedUpCapability> newSpeedCap = event.getPlayer().getCapability(ModCapability.SPEED_UP_CAPABILITY);
             if (oldSpeedCap.isPresent() && newSpeedCap.isPresent()) {
