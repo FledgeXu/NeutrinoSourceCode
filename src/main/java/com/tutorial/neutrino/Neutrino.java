@@ -48,6 +48,6 @@ public class Neutrino {
         com.tutorial.neutrino.container.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.container.TileEntityTypeRegistry.TILE_ENTITY_TYPE_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.container.ContainerTypeRegistry.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
+        com.tutorial.neutrino.hud.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
