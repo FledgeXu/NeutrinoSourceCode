@@ -25,7 +25,7 @@ public class ObsidianFirstContainerTileEntity extends TileEntity implements ITic
 
     @Override
     public ITextComponent getDisplayName() {
-        return new StringTextComponent("Fist Container");
+        return new StringTextComponent("First Container");
     }
 
     @Nullable

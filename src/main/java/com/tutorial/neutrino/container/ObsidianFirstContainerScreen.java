@@ -13,8 +13,8 @@ public class ObsidianFirstContainerScreen extends ContainerScreen<ObsidianFirstC
 
     public ObsidianFirstContainerScreen(ObsidianFirstContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
-        xSize = 176;
-        ySize = 166;
+        this.xSize = textureWidth;
+        this.ySize = textureHeight;
     }
 
     @Override
