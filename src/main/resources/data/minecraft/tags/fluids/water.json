@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "neutrino:obsidian_fluid",
+    "neutrino:obsidian_fluid_flowing"
+  ]
+}
