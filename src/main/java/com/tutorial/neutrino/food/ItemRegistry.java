@@ -7,7 +7,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, "neutrino");
-    public static RegistryObject<Item> obsidianIngot = ITEMS.register("obsidian_apple", () -> {
+    public static RegistryObject<Item> obsidianApple = ITEMS.register("obsidian_apple", () -> {
         return new ObsidianApple();
     });
 }
