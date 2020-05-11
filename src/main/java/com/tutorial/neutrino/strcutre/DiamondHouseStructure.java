@@ -13,19 +13,22 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 import java.util.Random;
 import java.util.function.Function;
 
-public class DiamondHouse extends Structure<NoFeatureConfig> {
-    public DiamondHouse(Function<Dynamic<?>, ? extends NoFeatureConfig> configFactoryIn) {
+public class DiamondHouseStructure extends Structure<NoFeatureConfig> {
+    public DiamondHouseStructure(Function<Dynamic<?>, ? extends NoFeatureConfig> configFactoryIn) {
         super(configFactoryIn);
     }
 
     @Override
     public boolean func_225558_a_(BiomeManager biomeManagerIn, ChunkGenerator<?> generatorIn, Random randIn, int chunkX, int chunkZ, Biome biomeIn) {
-        return true;
+        if (randIn.nextFloat() < 0.03) {
+            return true;
+        }
+        return false;
     }
 
     @Override
     public IStartFactory getStartFactory() {
-        return DiamondHouse.Start::new;
+        return DiamondHouseStructure.Start::new;
     }
 
     @Override
@@ -35,7 +38,7 @@ public class DiamondHouse extends Structure<NoFeatureConfig> {
 
     @Override
     public int getSize() {
-        return 5;
+        return 3;
     }
 
     public static class Start extends StructureStart {
@@ -46,8 +49,8 @@ public class DiamondHouse extends Structure<NoFeatureConfig> {
 
         @Override
         public void init(ChunkGenerator<?> generator, TemplateManager templateManagerIn, int chunkX, int chunkZ, Biome biomeIn) {
-            DiamondHouseTemplate diamondHouseTemplate = new DiamondHouseTemplate(this.rand, chunkX * 16, chunkZ * 16);
-            this.components.add(diamondHouseTemplate);
+            DiamondHouseStructurePiece diamondHouseStructurePiece = new DiamondHouseStructurePiece(this.rand, chunkX * 16, chunkZ * 16);
+            this.components.add(diamondHouseStructurePiece);
             this.recalculateStructureSize();
         }
     }

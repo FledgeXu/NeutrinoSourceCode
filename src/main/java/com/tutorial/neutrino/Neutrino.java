@@ -1,5 +1,6 @@
 package com.tutorial.neutrino;
 
+import com.tutorial.neutrino.strcutre.FeatureRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -52,5 +53,6 @@ public class Neutrino {
         com.tutorial.neutrino.first_fluid.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.first_fluid.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.first_fluid.FluidRegistry.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        FeatureRegistry.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
