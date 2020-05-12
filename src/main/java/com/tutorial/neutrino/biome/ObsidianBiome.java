@@ -15,13 +15,7 @@ public class ObsidianBiome extends Biome {
     protected ObsidianBiome(Builder biomeBuilder) {
         super(biomeBuilder);
         this.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, Blocks.GOLD_ORE.getDefaultState(), 9)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 32, 32, 80))));
-        addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.WITHER_SKELETON, 30, 5, 10));
+        this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.WITHER_SKELETON, 30, 5, 10));
         DefaultBiomeFeatures.addCarvers(this);
-        DefaultBiomeFeatures.addEndCity(this);
-    }
-
-    @Override
-    public TempCategory getTempCategory() {
-        return super.getTempCategory();
     }
 }

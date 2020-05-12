@@ -25,8 +25,4 @@ public class BiomeRegistry {
                 .waterFogColor(0x632ebf)
         );
     });
-
-    public static void registryBiome() {
-        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(obsidianBiome.get(), 1000));
-    }
 }
