@@ -25,13 +25,22 @@ public class DiamondHouseStructurePiece extends ScatteredStructurePiece {
     }
 
     @Override
-    public boolean func_225577_a_(IWorld world, ChunkGenerator<?> chunkGenerator, Random random, MutableBoundingBox mutableBoundingBox, ChunkPos chunkPos) {
-        this.fillWithRandomizedBlocks(world, mutableBoundingBox, 0, 0, 0, 4, 4, 4, false, random, BUILD_STONE_SELECTOR);
-        this.fillWithAir(world, mutableBoundingBox, 1, 1, 1, 3, 3, 3);
-        this.setBlockState(world, Blocks.ACACIA_TRAPDOOR.getDefaultState().rotate(Rotation.CLOCKWISE_90), 2, 2, 0, mutableBoundingBox);
-        this.fillWithAir(world, mutableBoundingBox, 2, 1, 0, 2, 1, 0);
+    public boolean create(IWorld worldIn, ChunkGenerator<?> chunkGeneratorIn, Random randomIn, MutableBoundingBox mutableBoundingBoxIn, ChunkPos chunkPosIn) {
+        this.fillWithRandomizedBlocks(worldIn, mutableBoundingBoxIn, 0, 0, 0, 4, 4, 4, false, randomIn, BUILD_STONE_SELECTOR);
+        this.fillWithAir(worldIn, mutableBoundingBoxIn, 1, 1, 1, 3, 3, 3);
+        this.setBlockState(worldIn, Blocks.ACACIA_TRAPDOOR.getDefaultState().rotate(Rotation.CLOCKWISE_90), 2, 2, 0, mutableBoundingBoxIn);
+        this.fillWithAir(worldIn, mutableBoundingBoxIn, 2, 1, 0, 2, 1, 0);
         return true;
     }
+
+    //    @Override
+//    public boolean create(IWorld world, ChunkGenerator<?> chunkGenerator, Random random, MutableBoundingBox mutableBoundingBox, ChunkPos chunkPos) {
+//        this.fillWithRandomizedBlocks(world, mutableBoundingBox, 0, 0, 0, 4, 4, 4, false, random, BUILD_STONE_SELECTOR);
+//        this.fillWithAir(world, mutableBoundingBox, 1, 1, 1, 3, 3, 3);
+//        this.setBlockState(world, Blocks.ACACIA_TRAPDOOR.getDefaultState().rotate(Rotation.CLOCKWISE_90), 2, 2, 0, mutableBoundingBox);
+//        this.fillWithAir(world, mutableBoundingBox, 2, 1, 0, 2, 1, 0);
+//        return true;
+//    }
 
     static class Selector extends StructurePiece.BlockSelector {
         private Selector() {
