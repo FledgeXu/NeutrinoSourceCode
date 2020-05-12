@@ -10,6 +10,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class FeatureRegistry {
     public static final DeferredRegister<Feature<?>> FEATURES = new DeferredRegister<>(ForgeRegistries.FEATURES, "neutrino");
     public static RegistryObject<Structure<NoFeatureConfig>> obsidianBlock = FEATURES.register("house", () -> {
-        return new DiamondHouseStructure(NoFeatureConfig::deserialize);
+        return new DiamondHouseStructure(Dynamic -> {
+            return NoFeatureConfig.deserialize(Dynamic);
+        });
     });
 }

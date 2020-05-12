@@ -16,8 +16,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class CommonEventHandler {
     public static IStructurePieceType diamondHouseStructurePieceType;
     @SubscribeEvent
-    public static void onServerEventBus(FMLCommonSetupEvent event) {
-        diamondHouseStructurePieceType = Registry.register(Registry.STRUCTURE_PIECE, "house", DiamondHouseStructurePiece::new);
+    public static void onCommonSetup(FMLCommonSetupEvent event) {
+        diamondHouseStructurePieceType = Registry.register(Registry.STRUCTURE_PIECE, "house", (templateManager, nbt) -> {
+            return new DiamondHouseStructurePiece(templateManager, nbt);
+        });
         for (Biome biome : ForgeRegistries.BIOMES) {
             biome.addStructure(FeatureRegistry.obsidianBlock.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             biome.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, FeatureRegistry.obsidianBlock.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));

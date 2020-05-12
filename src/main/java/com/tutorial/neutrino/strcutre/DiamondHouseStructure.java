@@ -43,8 +43,8 @@ public class DiamondHouseStructure extends Structure<NoFeatureConfig> {
 
     public static class Start extends StructureStart {
 
-        public Start(Structure<?> p_i225876_1_, int p_i225876_2_, int p_i225876_3_, MutableBoundingBox p_i225876_4_, int p_i225876_5_, long p_i225876_6_) {
-            super(p_i225876_1_, p_i225876_2_, p_i225876_3_, p_i225876_4_, p_i225876_5_, p_i225876_6_);
+        public Start(Structure<?> structure, int chunkPosX, int chunkPosZ, MutableBoundingBox bounds, int references, long seed) {
+            super(structure, chunkPosX, chunkPosZ, bounds, references, seed);
         }
 
         @Override

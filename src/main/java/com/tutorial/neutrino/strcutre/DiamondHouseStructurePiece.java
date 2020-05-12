@@ -33,15 +33,6 @@ public class DiamondHouseStructurePiece extends ScatteredStructurePiece {
         return true;
     }
 
-    //    @Override
-//    public boolean create(IWorld world, ChunkGenerator<?> chunkGenerator, Random random, MutableBoundingBox mutableBoundingBox, ChunkPos chunkPos) {
-//        this.fillWithRandomizedBlocks(world, mutableBoundingBox, 0, 0, 0, 4, 4, 4, false, random, BUILD_STONE_SELECTOR);
-//        this.fillWithAir(world, mutableBoundingBox, 1, 1, 1, 3, 3, 3);
-//        this.setBlockState(world, Blocks.ACACIA_TRAPDOOR.getDefaultState().rotate(Rotation.CLOCKWISE_90), 2, 2, 0, mutableBoundingBox);
-//        this.fillWithAir(world, mutableBoundingBox, 2, 1, 0, 2, 1, 0);
-//        return true;
-//    }
-
     static class Selector extends StructurePiece.BlockSelector {
         private Selector() {
         }
