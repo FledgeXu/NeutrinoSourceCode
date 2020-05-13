@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "neutrino:obsidian_ingot"
+    }
+  },
+  "result": {
+    "item": "neutrino:obsidian_block",
+    "count": 1
+  }
+}
