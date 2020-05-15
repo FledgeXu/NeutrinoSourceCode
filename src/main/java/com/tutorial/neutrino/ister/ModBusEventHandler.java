@@ -1,4 +1,4 @@
-package com.tutorial.neutrino.teisr;
+package com.tutorial.neutrino.ister;
 
 import net.minecraft.client.renderer.model.IBakedModel;
 import net.minecraft.client.renderer.model.ModelResourceLocation;

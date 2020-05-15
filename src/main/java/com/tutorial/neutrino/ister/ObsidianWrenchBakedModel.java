@@ -1,4 +1,4 @@
-package com.tutorial.neutrino.teisr;
+package com.tutorial.neutrino.ister;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.block.BlockState;
@@ -25,7 +25,7 @@ public class ObsidianWrenchBakedModel implements IBakedModel {
     @Nonnull
     @Override
     public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, @Nonnull Random rand, @Nonnull IModelData extraData) {
-        return this.existingModel.getQuads(state, side, rand, extraData);
+        throw new AssertionError("IForgeBakedModel::getQuads should never be called, only IForgeBakedModel::getQuads");
     }
 
     @Override
@@ -65,7 +65,7 @@ public class ObsidianWrenchBakedModel implements IBakedModel {
 
     @Override
     public IBakedModel handlePerspective(ItemCameraTransforms.TransformType cameraTransformType, MatrixStack mat) {
-        if (cameraTransformType == ItemCameraTransforms.TransformType.FIRST_PERSON_RIGHT_HAND) {
+        if (cameraTransformType == ItemCameraTransforms.TransformType.FIRST_PERSON_RIGHT_HAND || cameraTransformType == ItemCameraTransforms.TransformType.FIRST_PERSON_LEFT_HAND) {
             return this;
         }
         return this.existingModel.handlePerspective(cameraTransformType, mat);

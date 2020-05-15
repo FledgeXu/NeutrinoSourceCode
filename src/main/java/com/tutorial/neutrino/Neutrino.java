@@ -62,7 +62,7 @@ public class Neutrino {
         com.tutorial.neutrino.strcutre.FeatureRegistry.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.biome.BiomeRegistry.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.dimensions.ModDimensionRegistry.MOD_DIMENSION.register(FMLJavaModLoadingContext.get().getModEventBus());
-        com.tutorial.neutrino.teisr.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.ister.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.configure.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.sounds.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.sounds.SoundEventRegistry.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());

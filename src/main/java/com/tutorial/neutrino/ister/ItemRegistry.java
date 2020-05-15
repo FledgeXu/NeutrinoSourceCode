@@ -1,4 +1,4 @@
-package com.tutorial.neutrino.teisr;
+package com.tutorial.neutrino.ister;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
