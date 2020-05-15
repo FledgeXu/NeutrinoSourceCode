@@ -14,8 +14,14 @@ public class CommandEventHandler {
     public static void onServerStaring(FMLServerStartingEvent event) {
         CommandDispatcher<CommandSource> dispatcher = event.getCommandDispatcher();
         LiteralCommandNode<CommandSource> cmd = dispatcher.register(
-                Commands.literal("neutrino").then(TestCommand.register(dispatcher))
+                Commands.literal("neutrino").then(
+                        Commands.literal("test")
+                                .requires((commandSource) -> {
+                                    return commandSource.hasPermissionLevel(0);
+                                })
+                                .executes(TestCommand.instance)
+                )
         );
-
+        dispatcher.register(Commands.literal("nu").redirect(cmd));
     }
 }
