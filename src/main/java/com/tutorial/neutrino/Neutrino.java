@@ -1,7 +1,10 @@
 package com.tutorial.neutrino;
 
 import com.tutorial.neutrino.biome.ObsidianWorldType;
+import com.tutorial.neutrino.configure.Config;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod("neutrino")
@@ -9,6 +12,7 @@ public class Neutrino {
     public static final ObsidianWorldType obsidianWorldType = new ObsidianWorldType();
 
     public Neutrino() {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.COMMON_CONFIG);
         com.tutorial.neutrino.first_item.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.food.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.melee_weapons.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -59,5 +63,6 @@ public class Neutrino {
         com.tutorial.neutrino.biome.BiomeRegistry.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.dimensions.ModDimensionRegistry.MOD_DIMENSION.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.teisr.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.configure.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
