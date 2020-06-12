@@ -45,7 +45,7 @@ public class ObsidianFirstGui extends Screen {
     }
 
     @Override
-    public void render(int mouseX, int mouseY, float particleTick) {
+    public void render(int mouseX, int mouseY, float partialTick) {
         this.renderBackground();
         RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
         this.minecraft.getTextureManager().bindTexture(OBSIDIAN_FIRST_GUI_TEXTURE);
@@ -54,9 +54,9 @@ public class ObsidianFirstGui extends Screen {
         this.blit(this.width / 2 - 150, 10, 0, 0, 300, 200, textureWidth, textureHeight);
         this.drawString(this.font, content, this.width / 2 - 10, 30, 0xeb0505);
 
-        this.textFieldWidget.render(mouseX, mouseY, particleTick);
-        this.button.render(mouseX, mouseY, particleTick);
-        this.sliderBar.render(mouseX, mouseY, particleTick);
-        super.render(mouseX, mouseY, particleTick);
+        this.textFieldWidget.render(mouseX, mouseY, partialTick);
+        this.button.render(mouseX, mouseY, partialTick);
+        this.sliderBar.render(mouseX, mouseY, partialTick);
+        super.render(mouseX, mouseY, partialTick);
     }
 }
