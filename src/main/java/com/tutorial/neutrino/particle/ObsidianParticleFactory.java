@@ -17,7 +17,7 @@ public class ObsidianParticleFactory implements IParticleFactory<ObsidianParticl
     @Nullable
     @Override
     public Particle makeParticle(ObsidianParticleData typeIn, World worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-        ObsidianParticle particle = new ObsidianParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed);
+        ObsidianParticle particle = new ObsidianParticle(worldIn, x, y, z, typeIn.getSpeed(), typeIn.getColor(), typeIn.getDiameter());
         particle.selectSpriteRandomly(sprites);
         return particle;
     }

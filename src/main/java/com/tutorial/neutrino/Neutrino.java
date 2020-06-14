@@ -66,8 +66,6 @@ public class Neutrino {
         com.tutorial.neutrino.configure.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.sounds.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.sounds.SoundEventRegistry.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        com.tutorial.neutrino.particle.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        com.tutorial.neutrino.particle.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.particle.ParticleRegistry.PARTICLE_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
