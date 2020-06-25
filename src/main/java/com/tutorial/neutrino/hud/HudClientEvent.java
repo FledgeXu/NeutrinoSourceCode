@@ -8,10 +8,10 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
 public class HudClientEvent {
-    private static ObsidianGUI obsidianGUI = new ObsidianGUI();
 
     @SubscribeEvent
     public static void onOverlayRender(RenderGameOverlayEvent event) {
+        ObsidianGUI obsidianGUI = new ObsidianGUI();
         if (event.getType() != RenderGameOverlayEvent.ElementType.ALL) {
             return;
         }
