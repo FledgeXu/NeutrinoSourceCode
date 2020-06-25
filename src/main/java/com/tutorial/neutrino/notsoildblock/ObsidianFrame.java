@@ -1,4 +1,4 @@
-package com.tutorial.neutrino.nonesoildblock;
+package com.tutorial.neutrino.notsoildblock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

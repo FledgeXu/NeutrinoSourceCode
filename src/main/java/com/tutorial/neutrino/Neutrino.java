@@ -20,8 +20,8 @@ public class Neutrino {
         com.tutorial.neutrino.first_block.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.blockstate.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.blockstate.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        com.tutorial.neutrino.nonesoildblock.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        com.tutorial.neutrino.nonesoildblock.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.notsoildblock.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.notsoildblock.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.obj.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.obj.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.first_tileentity.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -67,5 +67,7 @@ public class Neutrino {
         com.tutorial.neutrino.sounds.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.sounds.SoundEventRegistry.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         com.tutorial.neutrino.particle.ParticleRegistry.PARTICLE_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.special_render_type.BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        com.tutorial.neutrino.special_render_type.ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

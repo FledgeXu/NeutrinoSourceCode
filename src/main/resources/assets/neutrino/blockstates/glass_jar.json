@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "neutrino:block/glass_jar"
+    }
+  }
+}

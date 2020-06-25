@@ -11,13 +11,13 @@ public class HudClientEvent {
 
     @SubscribeEvent
     public static void onOverlayRender(RenderGameOverlayEvent event) {
-        ObsidianGUI obsidianGUI = new ObsidianGUI();
         if (event.getType() != RenderGameOverlayEvent.ElementType.ALL) {
             return;
         }
         if (Minecraft.getInstance().player == null || Minecraft.getInstance().player.getHeldItem(Hand.MAIN_HAND).getItem() != ItemRegistry.obsidianHud.get()) {
             return;
         }
+        ObsidianGUI obsidianGUI = new ObsidianGUI();
         obsidianGUI.render();
     }
 }
