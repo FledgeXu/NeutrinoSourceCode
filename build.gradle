@@ -1,6 +1,11 @@
 buildscript {
     repositories {
+        maven { url = 'http://gradle.otakusaikou.com/releases' }
+        maven { url = 'http://bmclapi2.bangbang93.com/maven'}
+        maven { url = 'https://download.mcbbs.net/maven' }
         maven { url = 'https://files.minecraftforge.net/maven' }
+        maven { url = 'https://maven.aliyun.com/repository/central' }
+        maven { url = 'https://maven.aliyun.com/repository/jcenter' }
         jcenter()
         mavenCentral()
     }

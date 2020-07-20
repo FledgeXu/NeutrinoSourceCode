@@ -11,6 +11,13 @@ public class ObsidianFirstContainerScreen extends ContainerScreen<ObsidianFirstC
     private int textureWidth = 176;
     private int textureHeight = 166;
 
+    @Override
+    public void render(int mouseX, int mouseY, float partialTicks) {
+        renderBackground();
+        super.render(mouseX, mouseY, partialTicks);
+        renderHoveredToolTip(mouseX, mouseY);
+    }
+
     public ObsidianFirstContainerScreen(ObsidianFirstContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
         this.xSize = textureWidth;
