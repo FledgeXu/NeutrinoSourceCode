@@ -2,11 +2,12 @@ package com.tutorial.neutrino.hud;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Hand;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class HudClientEvent {
 
     @SubscribeEvent

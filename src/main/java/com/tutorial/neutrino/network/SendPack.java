@@ -12,7 +12,7 @@ public class SendPack {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public SendPack(PacketBuffer buffer) {
-        message = buffer.readString();
+        message = buffer.readString(Short.MAX_VALUE);
     }
 
     public SendPack(String message) {
