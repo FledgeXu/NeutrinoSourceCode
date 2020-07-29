@@ -10,7 +10,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBusEventHandler {
     @SubscribeEvent
-    public static void onClineSetupEvent(FMLClientSetupEvent event) {
+    public static void onClientSetupEvent(FMLClientSetupEvent event) {
         ScreenManager.registerFactory(ContainerTypeRegistry.obsidianFirstContainer.get(), (ObsidianFirstContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) -> {
             return new ObsidianFirstContainerScreen(screenContainer, inv, titleIn);
         });
